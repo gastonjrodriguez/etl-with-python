@@ -1,0 +1,12 @@
+# Entornos
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Datos crudos y outputs
+data/
+output/
+
+# OS
+.DS_Store
