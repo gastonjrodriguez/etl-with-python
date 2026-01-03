@@ -1,0 +1,201 @@
+review_id,product_id,customer_id,rating,title,comment,is_verified_purchase,helpful_votes,created_at
+1,64,169,1,Podría mejorar,Excelente relación calidad-precio.,True,25,2023-09-17
+2,68,472,3,Podría mejorar,"Superó mis expectativas, lo recomiendo totalmente.",True,17,2024-07-11
+3,29,497,5,Muy bueno,Excelente relación calidad-precio.,True,35,2023-08-23
+4,98,378,1,Muy bueno,El producto es correcto pero la entrega tardó.,True,40,2024-09-13
+5,93,11,3,Excelente producto,Excelente relación calidad-precio.,False,8,2025-05-08
+6,52,409,1,Podría mejorar,Muy buena calidad por el precio.,True,22,2023-03-18
+7,86,498,4,Excelente producto,El producto es correcto pero la entrega tardó.,True,11,2024-06-03
+8,86,342,2,Cumple expectativas,No cumplió mis expectativas.,False,21,2025-02-06
+9,26,250,3,Satisfecho,"Superó mis expectativas, lo recomiendo totalmente.",False,48,2023-06-03
+10,42,352,2,Cumple expectativas,Excelente relación calidad-precio.,False,1,2024-03-10
+11,31,391,4,Cumple expectativas,Muy buena calidad por el precio.,True,2,2025-02-17
+12,22,233,2,Podría mejorar,Excelente relación calidad-precio.,False,5,2024-10-31
+13,82,278,3,No tan bueno,Bueno pero esperaba un poco más.,False,20,2025-11-24
+14,34,415,3,Cumple expectativas,Excelente relación calidad-precio.,True,41,2025-03-08
+15,18,296,1,Recomendado,"Superó mis expectativas, lo recomiendo totalmente.",True,19,2025-07-20
+16,65,493,4,Muy bueno,Excelente relación calidad-precio.,False,29,2024-08-08
+17,37,65,1,Recomendado,Bueno pero esperaba un poco más.,True,43,2023-10-18
+18,56,71,2,Buena calidad,Excelente relación calidad-precio.,True,41,2024-03-30
+19,92,202,4,Satisfecho,Cumple con lo prometido.,False,43,2025-04-16
+20,8,3,3,Satisfecho,El producto es correcto pero la entrega tardó.,False,34,2024-01-30
+21,38,491,2,Cumple expectativas,Excelente relación calidad-precio.,False,7,2025-04-02
+22,88,399,4,Satisfecho,Bueno pero esperaba un poco más.,True,16,2025-02-18
+23,39,362,5,Cumple expectativas,Excelente relación calidad-precio.,True,10,2023-03-12
+24,42,35,4,Muy bueno,Llegó a tiempo y en perfecto estado.,True,2,2025-02-24
+25,10,376,5,Podría mejorar,Muy buena calidad por el precio.,True,30,2024-02-01
+26,72,490,3,Excelente producto,Excelente relación calidad-precio.,False,40,2023-12-13
+27,22,409,3,Cumple expectativas,Excelente relación calidad-precio.,True,29,2025-01-19
+28,88,387,4,Buena calidad,"Superó mis expectativas, lo recomiendo totalmente.",True,11,2025-05-27
+29,97,124,4,Muy bueno,El producto es correcto pero la entrega tardó.,True,31,2025-02-11
+30,42,18,4,Excelente producto,Llegó a tiempo y en perfecto estado.,False,19,2025-03-08
+31,65,265,1,Buena calidad,"Superó mis expectativas, lo recomiendo totalmente.",True,48,2023-01-17
+32,53,15,2,No tan bueno,Excelente relación calidad-precio.,False,18,2024-11-09
+33,46,87,3,Satisfecho,"Superó mis expectativas, lo recomiendo totalmente.",True,12,2025-11-13
+34,93,106,1,No tan bueno,Excelente relación calidad-precio.,True,19,2023-11-05
+35,45,347,2,No tan bueno,Muy buena calidad por el precio.,True,35,2024-02-16
+36,17,49,5,Satisfecho,No cumplió mis expectativas.,True,24,2024-12-11
+37,48,434,4,Buena calidad,Llegó a tiempo y en perfecto estado.,True,26,2023-08-05
+38,38,276,4,Buena calidad,El producto es correcto pero la entrega tardó.,True,32,2025-04-09
+39,94,464,1,Excelente producto,Bueno pero esperaba un poco más.,True,37,2024-09-03
+40,72,43,1,Muy bueno,Bueno pero esperaba un poco más.,True,7,2023-02-17
+41,73,24,4,Podría mejorar,Llegó a tiempo y en perfecto estado.,True,36,2025-04-25
+42,100,91,4,Satisfecho,El producto es correcto pero la entrega tardó.,True,11,2023-04-04
+43,47,172,1,Podría mejorar,El producto es correcto pero la entrega tardó.,False,44,2023-03-16
+44,43,37,4,Excelente producto,Llegó a tiempo y en perfecto estado.,True,36,2025-05-18
+45,12,441,2,Satisfecho,"Superó mis expectativas, lo recomiendo totalmente.",True,34,2024-04-28
+46,28,44,3,Buena calidad,El producto es correcto pero la entrega tardó.,True,33,2025-03-13
+47,78,403,3,Recomendado,Llegó a tiempo y en perfecto estado.,False,13,2025-04-04
+48,47,32,1,Recomendado,"Superó mis expectativas, lo recomiendo totalmente.",True,5,2025-04-09
+49,44,381,3,Satisfecho,"Superó mis expectativas, lo recomiendo totalmente.",True,43,2024-02-19
+50,80,269,3,Muy bueno,El producto es correcto pero la entrega tardó.,False,20,2024-05-17
+51,37,256,1,Buena calidad,Llegó a tiempo y en perfecto estado.,True,34,2023-09-29
+52,21,286,3,Podría mejorar,Bueno pero esperaba un poco más.,True,7,2023-03-07
+53,100,22,2,Muy bueno,"Superó mis expectativas, lo recomiendo totalmente.",True,41,2024-10-07
+54,65,360,4,Cumple expectativas,No cumplió mis expectativas.,False,35,2023-07-17
+55,27,185,5,Muy bueno,Cumple con lo prometido.,False,45,2023-05-13
+56,51,113,2,Buena calidad,No cumplió mis expectativas.,True,42,2025-06-03
+57,21,115,5,Cumple expectativas,Excelente relación calidad-precio.,True,45,2025-11-27
+58,53,51,4,Muy bueno,Llegó a tiempo y en perfecto estado.,True,43,2023-08-16
+59,59,411,2,Buena calidad,"Superó mis expectativas, lo recomiendo totalmente.",True,26,2025-02-21
+60,13,15,3,Satisfecho,No cumplió mis expectativas.,True,1,2024-06-10
+61,3,400,5,Buena calidad,Bueno pero esperaba un poco más.,True,34,2023-08-21
+62,24,149,5,Satisfecho,Bueno pero esperaba un poco más.,True,21,2023-09-05
+63,27,390,2,Cumple expectativas,Bueno pero esperaba un poco más.,True,22,2025-02-05
+64,62,366,1,Recomendado,Muy buena calidad por el precio.,True,15,2023-11-19
+65,100,62,3,Cumple expectativas,Excelente relación calidad-precio.,True,17,2023-08-31
+66,39,50,4,Recomendado,Excelente relación calidad-precio.,True,28,2023-12-23
+67,51,253,2,Cumple expectativas,Cumple con lo prometido.,True,11,2024-10-28
+68,91,346,3,Excelente producto,Cumple con lo prometido.,True,44,2025-09-27
+69,89,477,4,Excelente producto,"Superó mis expectativas, lo recomiendo totalmente.",False,17,2023-04-17
+70,49,383,2,Podría mejorar,Excelente relación calidad-precio.,True,50,2023-06-27
+71,64,183,5,Podría mejorar,"Superó mis expectativas, lo recomiendo totalmente.",True,44,2024-10-03
+72,25,445,4,Cumple expectativas,El producto es correcto pero la entrega tardó.,True,10,2025-05-02
+73,37,261,4,Podría mejorar,Bueno pero esperaba un poco más.,True,49,2023-06-22
+74,62,370,5,No tan bueno,Excelente relación calidad-precio.,True,24,2025-11-19
+75,8,148,3,Cumple expectativas,"Superó mis expectativas, lo recomiendo totalmente.",True,24,2025-06-10
+76,93,407,5,Buena calidad,El producto es correcto pero la entrega tardó.,False,32,2023-02-17
+77,30,239,2,Buena calidad,Cumple con lo prometido.,False,39,2025-11-08
+78,94,254,5,Muy bueno,Llegó a tiempo y en perfecto estado.,True,15,2025-08-20
+79,82,174,1,No tan bueno,"Superó mis expectativas, lo recomiendo totalmente.",True,19,2023-03-18
+80,45,223,5,No tan bueno,Llegó a tiempo y en perfecto estado.,True,6,2024-02-15
+81,39,228,2,Podría mejorar,Excelente relación calidad-precio.,True,3,2024-07-25
+82,21,224,2,Satisfecho,Muy buena calidad por el precio.,True,1,2023-11-30
+83,56,356,3,Satisfecho,Muy buena calidad por el precio.,True,40,2024-08-31
+84,1,340,3,Cumple expectativas,El producto es correcto pero la entrega tardó.,True,13,2025-05-06
+85,27,313,2,Buena calidad,"Superó mis expectativas, lo recomiendo totalmente.",False,7,2025-02-13
+86,93,338,4,Buena calidad,Excelente relación calidad-precio.,False,30,2025-07-25
+87,87,361,4,No tan bueno,Muy buena calidad por el precio.,False,17,2024-10-16
+88,57,108,2,Podría mejorar,Llegó a tiempo y en perfecto estado.,False,29,2024-06-26
+89,33,288,2,Recomendado,El producto es correcto pero la entrega tardó.,True,24,2023-09-29
+90,47,188,1,Recomendado,Llegó a tiempo y en perfecto estado.,False,29,2023-01-03
+91,62,94,5,Excelente producto,Bueno pero esperaba un poco más.,False,18,2023-11-07
+92,22,345,1,Cumple expectativas,Bueno pero esperaba un poco más.,False,33,2025-04-13
+93,27,476,2,Podría mejorar,"Superó mis expectativas, lo recomiendo totalmente.",True,28,2023-05-06
+94,23,447,1,No tan bueno,Cumple con lo prometido.,False,39,2023-04-10
+95,27,455,3,Satisfecho,Bueno pero esperaba un poco más.,False,35,2023-10-02
+96,96,111,2,Muy bueno,Llegó a tiempo y en perfecto estado.,True,10,2024-01-31
+97,47,52,2,Satisfecho,Excelente relación calidad-precio.,True,15,2023-12-13
+98,27,458,3,Podría mejorar,No cumplió mis expectativas.,True,20,2025-10-11
+99,44,458,3,Excelente producto,"Superó mis expectativas, lo recomiendo totalmente.",True,46,2023-03-25
+100,28,337,5,Buena calidad,El producto es correcto pero la entrega tardó.,True,20,2024-09-01
+101,87,460,4,Excelente producto,"Superó mis expectativas, lo recomiendo totalmente.",False,6,2023-03-31
+102,34,290,3,Buena calidad,"Superó mis expectativas, lo recomiendo totalmente.",True,12,2024-10-05
+103,92,375,1,Buena calidad,Llegó a tiempo y en perfecto estado.,True,11,2023-01-12
+104,28,449,5,Cumple expectativas,Llegó a tiempo y en perfecto estado.,True,48,2025-11-28
+105,97,61,3,Excelente producto,"Superó mis expectativas, lo recomiendo totalmente.",True,26,2025-06-26
+106,74,410,2,Cumple expectativas,Cumple con lo prometido.,True,22,2023-11-03
+107,76,405,5,Satisfecho,El producto es correcto pero la entrega tardó.,True,19,2024-10-22
+108,39,89,1,Recomendado,Llegó a tiempo y en perfecto estado.,False,4,2024-12-20
+109,2,296,5,No tan bueno,"Superó mis expectativas, lo recomiendo totalmente.",False,48,2024-08-16
+110,49,396,5,Excelente producto,No cumplió mis expectativas.,True,47,2024-07-10
+111,75,66,2,Cumple expectativas,Bueno pero esperaba un poco más.,True,27,2025-04-24
+112,69,278,4,Muy bueno,No cumplió mis expectativas.,True,37,2023-01-26
+113,39,365,1,Cumple expectativas,"Superó mis expectativas, lo recomiendo totalmente.",True,19,2023-10-22
+114,54,468,4,Cumple expectativas,Muy buena calidad por el precio.,True,12,2023-06-06
+115,75,409,1,Recomendado,Excelente relación calidad-precio.,False,28,2023-05-22
+116,30,292,3,Podría mejorar,El producto es correcto pero la entrega tardó.,True,28,2023-11-08
+117,4,8,4,Excelente producto,El producto es correcto pero la entrega tardó.,True,47,2025-07-09
+118,78,260,4,Recomendado,Bueno pero esperaba un poco más.,True,4,2024-08-02
+119,9,322,3,Recomendado,Cumple con lo prometido.,True,29,2023-12-24
+120,2,397,5,Recomendado,No cumplió mis expectativas.,True,50,2025-07-28
+121,63,413,4,Cumple expectativas,Bueno pero esperaba un poco más.,True,20,2023-02-25
+122,58,410,5,Excelente producto,Llegó a tiempo y en perfecto estado.,False,50,2025-10-18
+123,24,23,1,Muy bueno,Cumple con lo prometido.,True,34,2024-10-16
+124,56,440,1,Podría mejorar,Muy buena calidad por el precio.,True,28,2025-10-18
+125,22,17,3,Buena calidad,Bueno pero esperaba un poco más.,True,35,2025-02-08
+126,52,365,5,Cumple expectativas,No cumplió mis expectativas.,False,31,2024-08-04
+127,71,109,2,Satisfecho,Excelente relación calidad-precio.,True,24,2024-08-10
+128,59,439,4,Excelente producto,Bueno pero esperaba un poco más.,False,39,2023-09-11
+129,92,441,1,Excelente producto,Muy buena calidad por el precio.,False,34,2023-10-03
+130,98,485,3,Podría mejorar,Muy buena calidad por el precio.,True,3,2023-03-16
+131,70,408,1,Muy bueno,El producto es correcto pero la entrega tardó.,True,36,2024-07-21
+132,80,61,4,Cumple expectativas,El producto es correcto pero la entrega tardó.,False,7,2023-11-09
+133,29,99,3,No tan bueno,El producto es correcto pero la entrega tardó.,True,15,2023-05-28
+134,74,142,5,Excelente producto,Muy buena calidad por el precio.,True,49,2024-11-18
+135,4,243,3,Podría mejorar,"Superó mis expectativas, lo recomiendo totalmente.",True,30,2025-11-20
+136,93,172,5,Satisfecho,No cumplió mis expectativas.,True,44,2025-09-07
+137,46,385,4,Recomendado,Bueno pero esperaba un poco más.,True,1,2024-04-13
+138,53,221,4,Podría mejorar,El producto es correcto pero la entrega tardó.,True,9,2025-10-13
+139,34,116,3,Excelente producto,Muy buena calidad por el precio.,False,9,2024-04-09
+140,12,498,2,Satisfecho,Excelente relación calidad-precio.,True,9,2024-06-08
+141,46,453,3,Muy bueno,Bueno pero esperaba un poco más.,False,4,2025-12-08
+142,35,144,1,Satisfecho,Cumple con lo prometido.,True,23,2023-11-10
+143,81,72,2,Excelente producto,Cumple con lo prometido.,True,45,2023-08-31
+144,68,381,1,Buena calidad,Bueno pero esperaba un poco más.,False,19,2024-06-23
+145,94,475,5,Podría mejorar,Llegó a tiempo y en perfecto estado.,True,38,2025-07-14
+146,78,121,3,Podría mejorar,Muy buena calidad por el precio.,True,41,2023-01-13
+147,34,78,5,No tan bueno,Llegó a tiempo y en perfecto estado.,True,45,2024-03-25
+148,22,144,1,Cumple expectativas,Cumple con lo prometido.,True,11,2023-02-18
+149,90,360,3,Satisfecho,Cumple con lo prometido.,True,43,2025-03-18
+150,5,213,3,Satisfecho,Llegó a tiempo y en perfecto estado.,True,14,2024-07-26
+151,51,296,5,Recomendado,Bueno pero esperaba un poco más.,True,22,2024-12-14
+152,59,489,5,Podría mejorar,Cumple con lo prometido.,True,20,2024-12-07
+153,35,312,1,Recomendado,No cumplió mis expectativas.,True,43,2023-05-05
+154,77,489,2,Recomendado,Excelente relación calidad-precio.,True,47,2023-03-19
+155,69,307,3,No tan bueno,Bueno pero esperaba un poco más.,True,30,2024-10-28
+156,1,47,2,Buena calidad,No cumplió mis expectativas.,True,3,2024-01-31
+157,8,470,5,Cumple expectativas,No cumplió mis expectativas.,False,25,2024-02-17
+158,50,268,5,Buena calidad,Excelente relación calidad-precio.,False,13,2025-06-14
+159,63,239,4,Satisfecho,El producto es correcto pero la entrega tardó.,False,21,2023-08-18
+160,34,145,5,No tan bueno,Muy buena calidad por el precio.,False,49,2025-02-05
+161,45,82,4,Cumple expectativas,El producto es correcto pero la entrega tardó.,True,20,2025-06-17
+162,50,232,1,Buena calidad,El producto es correcto pero la entrega tardó.,True,6,2023-12-11
+163,17,142,5,Muy bueno,Llegó a tiempo y en perfecto estado.,True,36,2023-01-18
+164,32,320,1,No tan bueno,Bueno pero esperaba un poco más.,True,30,2023-01-31
+165,44,347,3,Recomendado,No cumplió mis expectativas.,True,2,2024-12-08
+166,95,12,1,Satisfecho,Muy buena calidad por el precio.,True,9,2025-03-22
+167,67,414,5,Cumple expectativas,Excelente relación calidad-precio.,True,17,2023-01-13
+168,65,171,5,Recomendado,Muy buena calidad por el precio.,True,50,2025-02-02
+169,66,393,5,Satisfecho,Muy buena calidad por el precio.,True,14,2023-03-03
+170,41,398,5,Recomendado,Muy buena calidad por el precio.,True,14,2025-05-26
+171,59,339,1,Recomendado,"Superó mis expectativas, lo recomiendo totalmente.",True,19,2024-05-16
+172,54,393,5,Cumple expectativas,Llegó a tiempo y en perfecto estado.,False,12,2025-04-19
+173,76,142,4,Satisfecho,No cumplió mis expectativas.,False,37,2025-02-11
+174,71,54,5,Satisfecho,Llegó a tiempo y en perfecto estado.,True,8,2025-06-09
+175,89,498,1,No tan bueno,Llegó a tiempo y en perfecto estado.,False,6,2024-11-17
+176,76,281,5,Excelente producto,Cumple con lo prometido.,True,37,2023-07-14
+177,86,207,5,Buena calidad,Excelente relación calidad-precio.,True,2,2025-07-06
+178,81,254,3,Muy bueno,El producto es correcto pero la entrega tardó.,True,35,2025-05-02
+179,57,249,3,Cumple expectativas,Llegó a tiempo y en perfecto estado.,True,20,2023-11-05
+180,74,288,5,Buena calidad,Cumple con lo prometido.,True,36,2025-08-19
+181,93,292,3,Recomendado,El producto es correcto pero la entrega tardó.,True,39,2025-03-11
+182,17,460,2,Excelente producto,Excelente relación calidad-precio.,False,26,2023-06-29
+183,52,115,1,Cumple expectativas,Llegó a tiempo y en perfecto estado.,False,23,2025-10-28
+184,16,396,2,Muy bueno,No cumplió mis expectativas.,False,29,2025-08-16
+185,83,292,2,Podría mejorar,Bueno pero esperaba un poco más.,True,1,2025-08-24
+186,31,131,3,Cumple expectativas,Cumple con lo prometido.,True,24,2025-05-06
+187,15,383,3,Muy bueno,El producto es correcto pero la entrega tardó.,True,40,2023-12-15
+188,6,77,4,Satisfecho,Excelente relación calidad-precio.,True,14,2025-11-30
+189,76,289,4,Excelente producto,Cumple con lo prometido.,True,26,2025-03-12
+190,93,14,3,Excelente producto,Excelente relación calidad-precio.,True,48,2023-11-18
+191,51,429,3,Muy bueno,Cumple con lo prometido.,True,9,2023-08-21
+192,17,158,2,Podría mejorar,Bueno pero esperaba un poco más.,True,47,2023-03-01
+193,55,465,1,Buena calidad,El producto es correcto pero la entrega tardó.,True,44,2023-01-02
+194,93,39,5,Cumple expectativas,Llegó a tiempo y en perfecto estado.,True,50,2024-07-06
+195,6,382,4,Podría mejorar,Muy buena calidad por el precio.,True,45,2023-02-22
+196,28,244,3,Satisfecho,Cumple con lo prometido.,True,28,2025-02-04
+197,68,304,5,Satisfecho,Cumple con lo prometido.,True,43,2024-05-26
+198,49,486,5,Muy bueno,Llegó a tiempo y en perfecto estado.,True,33,2024-11-27
+199,2,386,5,Muy bueno,Bueno pero esperaba un poco más.,True,5,2024-01-19
+200,70,35,3,Recomendado,El producto es correcto pero la entrega tardó.,True,30,2024-11-02

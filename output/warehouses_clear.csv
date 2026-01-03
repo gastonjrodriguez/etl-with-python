@@ -1,0 +1,6 @@
+warehouse_id,warehouse_name,location,capacity_units,current_occupancy,manager_name
+1,Depósito 1,Buenos Aires,92130,52,Roberto Sánchez
+2,Depósito 2,Córdoba,39289,44,Laura Torres
+3,Depósito 3,Rosario,48997,91,Laura Torres
+4,Depósito 4,Mendoza,21450,43,Roberto Sánchez
+5,Depósito 5,La Plata,47399,90,Martín González
