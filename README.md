@@ -39,6 +39,17 @@ python etl.py
 - archivos cargados inicialmente, que conforman el modelo, ahora devueltos en formato csv/parquet.
 
 
+## Evolucion del proyecto
+
+Este proyecto fue desarrollado de manera iterativa, siguiendo un flujo de trabajo de ETL similar al de un entorno real.
+
+Las actualizaciones más recientes incluyen:
+- Mejora en la configuración del archivo `.gitignore` para separar correctamente datos crudos de los outputs procesados
+- Incorporación de los resultados del ETL (archivos CSV/Parquet limpios) para mejorar la reproducibilidad y la transparencia del proyecto
+- Ajustes menores de mantenimiento y estructura del repositorio
+
+Estos cambios reflejan y emulan prácticas comunes en proyectos de ingeniería de datos, donde los pipelines se refinan y se documentan de forma progresiva.
+
 
 ## Autor
 Gaston Rodriguez - Dic 2025
