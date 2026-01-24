@@ -7,6 +7,8 @@ El pipeline está diseñado para ejecutarse en entornos aislados (Docker), recib
 
 ## Dataset
 El proyecto trabaja con múltiples archivos CSV que forman un sistema de e-commerce (orders, customers, products, etc.).
+Los archivos de entrada siguen un esquema predefinido (nombres de archivos y campos) esperado por el pipeline.
+
 
 ## Cómo correr (local)
 ```bash
