@@ -3,14 +3,23 @@
 ## Descripción
 Pipeline ETL que procesa datos de e-commerce para generar métricas de ventas.
 Realizado en Python, utilizando pandas, enfocado en limpieza, normalización y tipado correcto de datos.
+El pipeline está diseñado para ejecutarse en entornos aislados (Docker), recibiendo datos por volumenes externos y generando outputs reproducibles.
 
 ## Dataset
 El proyecto trabaja con múltiples archivos CSV que forman un sistema de e-commerce (orders, customers, products, etc.).
 
-## Cómo correr
+## Cómo correr (local)
 ```bash
-pip install pandas pyarrow
+pip install -r requirements.txt
 python etl.py
+```
+
+## Cómo correr (Docker)
+El ETL espera los archivos CSV en el directorio `data/` y escribirá los resultados en `output/`.
+
+```bash
+docker build -t etl-proyecto .
+docker run --rm -v "%cd%\data":/app/data -v "%cd%\output":/app/output etl-proyecto
 ```
 
 ### Extract
@@ -47,6 +56,7 @@ Las actualizaciones más recientes incluyen:
 - Mejora en la configuración del archivo `.gitignore` para separar correctamente datos crudos de los outputs procesados
 - Incorporación de los resultados del ETL (archivos CSV/Parquet limpios) para mejorar la reproducibilidad y la transparencia del proyecto
 - Ajustes menores de mantenimiento y estructura del repositorio
+- Dockerizacion del proyecto (`dockerfile` y `.dockerignore`)
 
 Estos cambios reflejan y emulan prácticas comunes en proyectos de ingeniería de datos, donde los pipelines se refinan y se documentan de forma progresiva.
 
