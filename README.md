@@ -1,22 +1,87 @@
 # ETL con Python
 
-## Descripción
+## Descripcion
+
 Pipeline ETL que procesa datos de e-commerce para generar métricas de ventas.
 Realizado en Python, utilizando pandas, enfocado en limpieza, normalización y tipado correcto de datos.
-El pipeline está diseñado para ejecutarse en entornos aislados (Docker), recibiendo datos por volumenes externos y generando outputs reproducibles.
+
+El pipeline está diseñado para ejecutarse en entornos aislados (Docker o entorno virtual).
+
+---
+
+## Tech stack
+
+- Python
+- pandas
+- numpy
+- pyarrow
+- Docker
+
+---
 
 ## Dataset
+
 El proyecto trabaja con múltiples archivos CSV que forman un sistema de e-commerce (orders, customers, products, etc.).
 Los archivos de entrada siguen un esquema predefinido (nombres de archivos y campos) esperado por el pipeline.
 
+---
 
-## Cómo correr (local)
-```bash
-pip install -r requirements.txt
-python etl.py
+## Estructura del proyecto
+
+```
+src/
+ ├─ extract.py
+ ├─ transform.py
+ ├─ load.py
+ ├─ analytics.py
+ ├─ main.py
+ ├─ __init__.py
+ └─ config.py
+
+.venv/
+data/    # inputs (no versionados)
+output/  # resultados (no versionados)
+
+dockerfile
+.dockerignore
+.gitignore
+README.md
+requirements.txt
 ```
 
-## Cómo correr (Docker)
+* `src/`: código del pipeline (extract, transform, load, analytics, main, init)
+* `data/`: datos de entrada (no versionados)
+* `output/`: resultados generados (no versionados)
+* `config.py`: configuración de paths y formatos de salida
+
+---
+
+## Pipeline flow
+
+Extract → Transform → Analytics → Load
+
+---
+
+## Como correr (local)
+
+Crear entorno virtual e instalar dependencias:
+
+```bash
+python -m venv .venv
+.venv\Scripts\Activate
+pip install -r requirements.txt
+```
+
+Ejecutar pipeline:
+
+```bash
+python -m src.main
+```
+
+---
+
+## Como correr (Docker)
+
 El ETL espera los archivos CSV en el directorio `data/` y escribirá los resultados en `output/`.
 
 ```bash
@@ -24,44 +89,77 @@ docker build -t etl-proyecto .
 docker run --rm -v "%cd%\data":/app/data -v "%cd%\output":/app/output etl-proyecto
 ```
 
-### Extract
-- Lectura de archivos CSV
-- Validación de carga
+---
 
-### Transform
-- Normalización de nulos
-- Limpieza de strings vacíos
-- Conversión de tipos de datos, considerando claves primarias y foráneas para mantener coherencia relacional
-- Conversión de fechas
+## Extract
 
+* Lectura de archivos CSV
+* Validación de carga
+
+---
+
+## Transform
+
+* Normalización de nulos
+* Limpieza de strings vacíos
+* Conversión de tipos de datos considerando claves primarias y foráneas para mantener coherencia relacional
+* Conversión de fechas
+* Conversión opcional de Period → timestamp para compatibilidad con herramientas BI y Parquet
+
+---
 
 ## Decisiones de limpieza
-- **Nulos**:
-    - DF_ORDERS: Reemplazo de nulls en df_orders['notes'] por "Sin notas", ya que simplemente son opcionales para el registro de la orden de compra.
-    - DF_ORDERS: Se mantiene el 'promotion_id' con sus nulos intactos, porque puede no existir una promocion vigente. 'promotion_id' es una FK, por ende, un 0 en lugar de null implica la existencia de la "promocion 0", no la ausencia de promocion. Dejar el null representa la ausencia en la relacion, lo cual es mas preciso en este caso.
-    - DF_CATEGORIES: si bien df_categories['parent_category_id'] tiene 7 nulos de 10 registros, se opta por conservarlos ya que los valores no nulos indican relaciones jerárquicas con una categoría padre (por ende si es null, nos encontramos ante una categoria padre en si misma).
-- **Duplicados**: A modo de prueba, con un for se dejó afuera la primera columna de cada DF, que en este caso particular siempre es PK de su respectiva tabla. Verificado con EDA (Exploratory Data Analysis). Sirve para ver como funciona el sistema: un cliente al querer mas de una unidad de determinado producto, genera un 'order_item_id' nuevo/unico pero mantiene el mismo 'order_id' al igual que el resto de parametros, siendo englobado en la misma compra/orden. Esta es la razon de por que vemos duplicados en 'order_items' si excluimos el 'order_item_id'.
-- **Tipos**: se crearon dos funciones para que la conversion sea mas eficiente: cast_columns, y cast_to_date exclusivamente para tipo fecha, ya que usa pd.to_datetime() en vez de astype(). Se convirtieron los tipos de datos pensando en la funcionalidad del dato para con el modelo, carga de nuevos datos, y analisis futuros.
 
+### Nulos
 
-## Output 
-- `ventas_por_cliente.csv`: Total gastado y cantidad de órdenes por cliente
-- `ventas_por_mes.csv`: Ventas totales por mes
-- archivos cargados inicialmente, que conforman el modelo, ahora devueltos en formato csv/parquet.
+* DF_ORDERS: reemplazo de nulls en `notes` por "Sin notas", ya que es un campo opcional.
+* DF_ORDERS: se mantiene `promotion_id` con nulls porque representa ausencia de relación (FK).
+* DF_CATEGORIES: `parent_category_id` conserva nulls ya que identifican categorías padre.
 
+### Duplicados
 
-## Evolucion del proyecto
+A modo de prueba se evaluaron duplicados excluyendo PK. Se verificó que duplicados en `order_items` responden a múltiples productos dentro de la misma orden.
 
-Este proyecto fue desarrollado de manera iterativa, siguiendo un flujo de trabajo de ETL similar al de un entorno real.
+### Tipos
 
-Las actualizaciones más recientes incluyen:
-- Mejora en la configuración del archivo `.gitignore` para separar correctamente datos crudos de los outputs procesados
-- Incorporación de los resultados del ETL (archivos CSV/Parquet limpios) para mejorar la reproducibilidad y la transparencia del proyecto
-- Ajustes menores de mantenimiento y estructura del repositorio
-- Dockerizacion del proyecto (`dockerfile` y `.dockerignore`)
+Se crearon funciones reutilizables:
 
-Estos cambios reflejan y emulan prácticas comunes en proyectos de ingeniería de datos, donde los pipelines se refinan y se documentan de forma progresiva.
+* `cast_columns`
+* `cast_to_date`
+
+Las conversiones consideran funcionalidad del dato, futuras cargas y análisis.
+
+---
+
+## Output
+
+Los resultados se guardan en formato **CSV y/o Parquet** según configuración en `src/config.py`.
+
+Ejemplos:
+
+* ventas_por_cliente
+* ventas_por_mes
+* datasets del modelo transformado
+
+El pipeline permite exportación reproducible para consumo analítico y BI.
+
+---
+
+## Diseño del pipeline
+
+* Arquitectura modular (extract → transform → load)
+* Configuración centralizada
+* Exportación configurable
+* Compatible con ejecución local y Docker
+* Inputs y outputs desacoplados del repositorio para reproducibilidad
+
+---
+
+## Posibles mejoras a futuro
+
+* Manejo de errores mas robusto
 
 
 ## Autor
-Gaston Rodriguez - Dic 2025
+
+Gaston Rodriguez
