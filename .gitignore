@@ -1,13 +1,21 @@
-# Entornos virtuales
+# Virtual env
 .venv/
 venv/
+
+# Environment var
+.env
 
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 
-# Datos crudos (inputs)
+# inputs/outputs
 data/
+output/
+
 
 # OS
 .DS_Store
+Thumbs.db
