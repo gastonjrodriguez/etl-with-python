@@ -1,11 +1,10 @@
-# ETL con Python
+# ETL with Python
 
-## Descripcion
+## Description
 
-Pipeline ETL que procesa datos de e-commerce para generar métricas de ventas.
-Realizado en Python, utilizando pandas, enfocado en limpieza, normalización y tipado correcto de datos.
+ETL pipeline that processes e-commerce data to generate sales metrics. Built in Python using pandas, with a focus on data cleaning, normalization, and proper data typing.
 
-El pipeline está diseñado para ejecutarse en entornos aislados (Docker o entorno virtual).
+The pipeline is designed to run in isolated environments (Docker or virtual environment).
 
 ---
 
@@ -21,12 +20,11 @@ El pipeline está diseñado para ejecutarse en entornos aislados (Docker o entor
 
 ## Dataset
 
-El proyecto trabaja con múltiples archivos CSV que forman un sistema de e-commerce (orders, customers, products, etc.).
-Los archivos de entrada siguen un esquema predefinido (nombres de archivos y campos) esperado por el pipeline.
+The project works with multiple CSV files that make up an e-commerce system (orders, customers, products, etc.). The input files follow a predefined schema (file and field names) expected by the pipeline.
 
 ---
 
-## Estructura del proyecto
+## Project structure
 
 ```
 src/
@@ -39,8 +37,8 @@ src/
  └─ config.py
 
 .venv/
-data/    # inputs (no versionados)
-output/  # resultados (no versionados)
+data/    # inputs (non-versioned)
+output/  # results (non-versioned)
 
 dockerfile
 .dockerignore
@@ -49,10 +47,10 @@ README.md
 requirements.txt
 ```
 
-* `src/`: código del pipeline (extract, transform, load, analytics, main, init)
-* `data/`: datos de entrada (no versionados)
-* `output/`: resultados generados (no versionados)
-* `config.py`: configuración de paths y formatos de salida
+* `src/`: pipeline code (extract, transform, load, analytics, main, init)
+* `data/`: input data (non-versioned)
+* `output/`: results (non-versioned)
+* `config.py`: path configuration and output formats
 
 ---
 
@@ -62,9 +60,9 @@ Extract → Transform → Analytics → Load
 
 ---
 
-## Como correr (local)
+## How to run (local)
 
-Crear entorno virtual e instalar dependencias:
+Create a virtual environment and install dependencies:
 
 ```bash
 python -m venv .venv
@@ -72,7 +70,7 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-Ejecutar pipeline:
+Execute pipeline:
 
 ```bash
 python -m src.main
@@ -80,86 +78,86 @@ python -m src.main
 
 ---
 
-## Como correr (Docker)
+## How to run (Docker)
 
-El ETL espera los archivos CSV en el directorio `data/` y escribirá los resultados en `output/`.
+The ETL process expects CSV files in the `data/` directory and will write the results to `output/`.
+
 
 ```bash
-docker build -t etl-proyecto .
-docker run --rm -v "%cd%\data":/app/data -v "%cd%\output":/app/output etl-proyecto
+docker build -t etl-project.
+docker run --rm -v "%cd%\data":/app/data -v "%cd%\output":/app/output etl-project
 ```
 
 ---
 
 ## Extract
 
-* Lectura de archivos CSV
-* Validación de carga
+* Reading CSV files
+* Load validation
 
 ---
 
 ## Transform
 
-* Normalización de nulos
-* Limpieza de strings vacíos
-* Conversión de tipos de datos considerando claves primarias y foráneas para mantener coherencia relacional
-* Conversión de fechas
-* Conversión opcional de Period → timestamp para compatibilidad con herramientas BI y Parquet
+* Normalization of nulls
+* Cleaning of empty strings
+* Data type conversion considering primary and foreign keys to maintain relational consistency
+* Date conversion
+* Optional conversion of Period → timestamp for compatibility with BI tools and Parquet
 
 ---
 
-## Decisiones de limpieza
+## Cleaning decisions
 
-### Nulos
+### Nulls
 
-* DF_ORDERS: reemplazo de nulls en `notes` por "Sin notas", ya que es un campo opcional.
-* DF_ORDERS: se mantiene `promotion_id` con nulls porque representa ausencia de relación (FK).
-* DF_CATEGORIES: `parent_category_id` conserva nulls ya que identifican categorías padre.
+* DF_ORDERS: Replacing nulls in `notes` with “No notes,” since it is an optional field.
+* DF_ORDERS: Retaining nulls in `promotion_id` because they represent the absence of a relationship (FK).
+* DF_CATEGORIES: `parent_category_id` retains nulls since they identify parent categories.
 
-### Duplicados
+### Duplicates
 
-A modo de prueba se evaluaron duplicados excluyendo PK. Se verificó que duplicados en `order_items` responden a múltiples productos dentro de la misma orden.
+As a test, duplicates were evaluated excluding PK. It was verified that duplicates in `order_items` correspond to multiple products within the same order.
 
-### Tipos
+### Types
 
-Se crearon funciones reutilizables:
+Reusable functions were created:
 
 * `cast_columns`
 * `cast_to_date`
 
-Las conversiones consideran funcionalidad del dato, futuras cargas y análisis.
+The conversions take into account data functionality, future loads, and analysis.
 
 ---
 
 ## Output
 
-Los resultados se guardan en formato **CSV y/o Parquet** según configuración en `src/config.py`.
+Results are saved in CSV and/or Parquet format depending on the configuration in `src/config.py`.
 
-Ejemplos:
+Examples:
 
-* ventas_por_cliente
-* ventas_por_mes
-* datasets del modelo transformado
+* top_clients
+* most_sold_product
+* monthly_sales
 
-El pipeline permite exportación reproducible para consumo analítico y BI.
-
----
-
-## Diseño del pipeline
-
-* Arquitectura modular (extract → transform → load)
-* Configuración centralizada
-* Exportación configurable
-* Compatible con ejecución local y Docker
-* Inputs y outputs desacoplados del repositorio para reproducibilidad
+The pipeline enables reproducible export for analytical and BI use.
 
 ---
 
-## Posibles mejoras a futuro
+## Pipeline design
 
-* Manejo de errores mas robusto
+* Centralized configuration
+* Configurable export
+* Supports local execution and Docker
+* Inputs and outputs decoupled from the repository for reproducibility
+
+---
+
+## Potential future improvements
+
+* More robust error handling
 
 
-## Autor
+## Author
 
 Gaston Rodriguez
